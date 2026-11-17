@@ -25,4 +25,5 @@ We use **ESLint with typescript-eslint (`strictTypeChecked` preset) and Prettier
 - ESLint must not enforce formatting rules; formatting belongs to Prettier only (for example, via `eslint-config-prettier`).
 - Type-aware linting needs each package's `tsconfig.json`, so lint and TypeScript configuration must stay in sync.
 - Full lint runs are slower; the pre-commit hook lints only staged files and CI runs the full lint.
+- Implementation follows in a separate change, once the shared configuration package and the base `tsconfig` exist.
 - Revisit Biome in a new ADR if its type-aware rule coverage reaches what the project relies on, or if lint time becomes a bottleneck.
